@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="scriptFace-recognition(img).js"></script>
+  <title>Face Recognition</title>
+  <style>
+     body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:url(layer2.png) no-repeat center center fixed;
+    background-size: cover;
+          margin: 0;
+          padding: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  font-family: consolas;
+  flex-direction: column;
+}
+canvas{
+  position: absolute;
+  top:0;
+  left:0;
+}
+ input {background-color: darkgray;
+  border-radius: 200px
+ }
+ div{
+        color:white;
+      }
+a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #ec3124;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+a:hover{
+  color: #ec3124;
+  background: #cdcdcd;
+  box-shadow: 0 0 10px #cdcdcd, 0 0 40px #cdcdcd, 0 0 80px #cdcdcd;
+  transition-delay: 1s;
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#ffffff);
+}
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#ffffff);
+}
+a:hover span:nth-child(3) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#ffffff);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#ffffff);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+    
+
+  </style>
+</head>
+<body>
+  <div>CLICK 'choose file' TO START</div>
+  <a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  <input type="file" id="imageUpload">
+</a>
+</body>
+</html>
